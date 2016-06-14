@@ -42,13 +42,13 @@ THE SOFTWARE.
 
 
 // Kp											ROLL       PITCH     YAW
-float pidkp[PIDNUMBER] = { 16.0e-2 , 16.0e-2  , 10e-1 }; 
+float pidkp[PIDNUMBER] = { 6.0e-2 , 6.0e-2 , 3.0e-1 };
 
 // Ki											ROLL       PITCH     YAW
-float pidki[PIDNUMBER] = { 8e-1  , 8e-1 , 5e-1 };	
+float pidki[PIDNUMBER] = { 5.5e-1 , 5.5e-1 , 3.0e-1 };
 
 // Kd											ROLL       PITCH     YAW
-float pidkd[PIDNUMBER] = { 8.8e-1 , 8.8e-1  , 5.0e-1 };	
+float pidkd[PIDNUMBER] = { 1.5e-1 , 1.5e-1 , 0.8e-1 };
 
 // "setpoint weighting" 0.0 - 1.0 where 0.0 = normal pid
 float b[3] = { 0.3 , 0.3 , 0.0};
