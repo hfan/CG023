@@ -34,15 +34,15 @@
 // battery saver
 // do not start software if battery is too low
 // flashes 2 times repeatedly at startup
-//#define STOP_LOWBATTERY
+#define STOP_LOWBATTERY
 
 // under this voltage the software will not start 
 // if STOP_LOWBATTERY is defined above
-#define STOP_LOWBATTERY_TRESH 3.3
+#define STOP_LOWBATTERY_TRESH -3.3
 
 // voltage to start warning
 // volts
-#define VBATTLOW 3.5
+#define VBATTLOW -3.5
 
 // compensation for battery voltage vs throttle drop
 // increase if battery low comes on at max throttle
