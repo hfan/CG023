@@ -75,11 +75,11 @@
 //#define SOFT_LPF_1ST_043HZ
 //#define SOFT_LPF_1ST_100HZ
 //#define SOFT_LPF_2ND_043HZ
-//#define SOFT_LPF_2ND_088HZ
+#define SOFT_LPF_2ND_088HZ
 //#define SOFT_LPF_4TH_088HZ
 //#define SOFT_LPF_4TH_160HZ
 //#define SOFT_LPF_4TH_250HZ
-#define SOFT_LPF_NONE
+//#define SOFT_LPF_NONE
 
 
 // this works only on newer boards (non mpu-6050)
@@ -109,7 +109,7 @@
 
 #define HEADLESSMODE CH_OFF
 
-#define LEVELMODE CH_AUX1
+#define LEVELMODE CH_FLIP
 
 #define STARTFLIP CH_OFF
 
@@ -139,13 +139,13 @@
 // motor curve to use
 // the pwm frequency has to be set independently
 // 720motors - use 8khz and curve none.
-#define MOTOR_CURVE_NONE
+//#define MOTOR_CURVE_NONE
 //#define MOTOR_CURVE_6MM_490HZ
-//#define MOTOR_CURVE_85MM_8KHZ
+#define MOTOR_CURVE_85MM_8KHZ
 //#define MOTOR_CURVE_85MM_32KHZ
 
 // lost quad beeps using motors (30 sec timeout)
-//#define MOTOR_BEEPS
+#define MOTOR_BEEPS
 
 // throttle angle compensation in level mode
 // comment out to disable
