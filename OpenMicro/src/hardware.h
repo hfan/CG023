@@ -25,7 +25,7 @@
 // comment out to disable
 #define ENABLE_VREG_PIN
 
-#define VREG_PIN_1 GPIO_Pin_1
+#define VREG_PIN_1 GPIO_Pin_5
 #define VREG_PORT_1 GPIOA
 
 
@@ -35,8 +35,8 @@
 #define LED1PIN GPIO_Pin_1
 #define LED1PORT GPIOB
 
-#define LED2PIN GPIO_Pin_4
-#define LED2PORT GPIOA
+#define LED2PIN GPIO_Pin_2
+#define LED2PORT GPIOB
 
 #define LED3PIN GPIO_Pin_12
 #define LED3PORT GPIOA
@@ -193,9 +193,9 @@
 //#define MOTOR0_PIN_PA5
 //#define MOTOR0_PIN_PA6
 //#define MOTOR0_PIN_PA7
-//#define MOTOR0_PIN_PA8
+#define MOTOR0_PIN_PA8
 //#define MOTOR0_PIN_PA9
-#define MOTOR0_PIN_PA10
+//#define MOTOR0_PIN_PA10
 //#define MOTOR0_PIN_PA11
 //#define MOTOR0_PIN_PB0
 //#define MOTOR0_PIN_PB1
@@ -212,9 +212,9 @@
 //#define MOTOR1_PIN_PA6
 //#define MOTOR1_PIN_PA7
 //#define MOTOR1_PIN_PA8
-#define MOTOR1_PIN_PA9
+//#define MOTOR1_PIN_PA9
 //#define MOTOR1_PIN_PA10
-//#define MOTOR1_PIN_PA11
+#define MOTOR1_PIN_PA11
 //#define MOTOR1_PIN_PB0
 //#define MOTOR1_PIN_PB1
 
@@ -229,8 +229,8 @@
 //#define MOTOR2_PIN_PA5
 //#define MOTOR2_PIN_PA6
 //#define MOTOR2_PIN_PA7
-#define MOTOR2_PIN_PA8
-//#define MOTOR2_PIN_PA9
+//#define MOTOR2_PIN_PA8
+#define MOTOR2_PIN_PA9
 //#define MOTOR2_PIN_PA10
 //#define MOTOR2_PIN_PA11
 //#define MOTOR2_PIN_PB0
@@ -249,8 +249,8 @@
 //#define MOTOR3_PIN_PA7
 //#define MOTOR3_PIN_PA8
 //#define MOTOR3_PIN_PA9
-//#define MOTOR3_PIN_PA10
-#define MOTOR3_PIN_PA11
+#define MOTOR3_PIN_PA10
+//#define MOTOR3_PIN_PA11
 //#define MOTOR3_PIN_PB0
 //#define MOTOR3_PIN_PB1
 
@@ -259,8 +259,8 @@
 // the expected orientation is with the dot in the front-left corner
 // use this to rotate to the correct orientation 
 // rotations performed in order
-//#define SENSOR_ROTATE_90_CW
-#define SENSOR_ROTATE_90_CCW
+#define SENSOR_ROTATE_90_CW
+//#define SENSOR_ROTATE_90_CCW
 //#define SENSOR_ROTATE_180
 //#define SENSOR_FLIP_180
 
