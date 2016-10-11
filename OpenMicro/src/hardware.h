@@ -106,7 +106,7 @@
 //#define SOFTI2C_GYRO_ADDRESS 0x69
 
 // disable the check for known gyro that causes the 4 times flash
-//#define DISABLE_GYRO_CHECK
+#define DISABLE_GYRO_CHECK
 
 // gyro ids for the gyro check
 #define GYRO_ID_1 0x68
