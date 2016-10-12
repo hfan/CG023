@@ -6,11 +6,11 @@
 #ifdef USE_ESC_DRIVER
 
 // working motor range (microseconds)
-#define ESC_MIN 1000
-#define ESC_MAX 2000
+#define ESC_MIN 1160
+#define ESC_MAX 1832
 
 // esc throttle off setting (microseconds
-#define ESC_OFF 900
+#define ESC_OFF 960
 
 // invert = signal after fets (may need 1k pullup resistor)
 // commented = signal straight from CPU pins
