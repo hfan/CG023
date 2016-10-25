@@ -23,7 +23,7 @@
 
 #undef ESC_FREQ
 // signal repetition frequency (hertz) min 185
-#define ESC_FREQ 333
+#define ESC_FREQ 500
 
 // do not change below
 
