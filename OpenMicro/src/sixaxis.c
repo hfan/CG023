@@ -135,6 +135,14 @@ void sixaxis_read(void)
 
 // this is the value of both cos 45 and sin 45 = 1/sqrt(2)
 #define INVSQRT2 0.707106781f
+
+#ifdef SENSOR_ROTATE_45_CW
+		{
+		float temp = accel[0];
+		accel[0] = accel[0] * INVSQRT2 - accel[1] * INVSQRT2;
+		accel[1] = temp * INVSQRT2 + accel[1] * INVSQRT2;	
+		}
+#endif
 		
 #ifdef SENSOR_ROTATE_45_CCW
 		{
@@ -183,6 +191,13 @@ gyronew[0] = gyronew[0] - gyrocal[0];
 gyronew[1] = gyronew[1] - gyrocal[1];
 gyronew[2] = gyronew[2] - gyrocal[2];
 	
+#ifdef SENSOR_ROTATE_45_CW
+		{
+		float temp = gyronew[1];
+		gyronew[1] = -(gyronew[0] * INVSQRT2 - gyronew[1] * INVSQRT2);
+		gyronew[0] = gyronew[0] * INVSQRT2 + temp * INVSQRT2;	
+		}
+#endif	
 	
 #ifdef SENSOR_ROTATE_45_CCW
 		{
@@ -262,6 +277,13 @@ gyronew[1] = gyronew[1] - gyrocal[1];
 gyronew[2] = gyronew[2] - gyrocal[2];
 	
 	
+#ifdef SENSOR_ROTATE_45_CW
+		{
+		float temp = gyronew[1];
+		gyronew[1] = -(gyronew[0] * INVSQRT2 - gyronew[1] * INVSQRT2);
+		gyronew[0] = gyronew[0] * INVSQRT2 + temp * INVSQRT2;	
+		}
+#endif
 		
 #ifdef SENSOR_ROTATE_45_CCW
 		{
