@@ -110,7 +110,7 @@
 // CH_OFF - off always ( all protocols)
 #define HEADLESSMODE CH_OFF
 
-#define LEVELMODE CH_AUX1
+#define LEVELMODE CH_FLIP
 
 #define STARTFLIP CH_FLIP
 
