@@ -109,7 +109,7 @@ void failloop( int val);
 
 int main(void)
 {
-	
+start:
 	delay(1000);
 
 
@@ -135,20 +135,24 @@ clk_init();
 	pwm_set( MOTOR_BR , 0); 
 
 
-	sixaxis_init();
-	
-	if ( sixaxis_check() ) 
+	while (1)
 	{
-		#ifdef SERIAL_INFO	
-		printf( " MPU found \n" );
-		#endif
-	}
-	else 
-	{
-		#ifdef SERIAL_INFO	
-		printf( "ERROR: MPU NOT FOUND \n" );	
-		#endif
-		failloop(4);
+		sixaxis_init();
+
+		if ( sixaxis_check() )
+		{
+			#ifdef SERIAL_INFO
+			printf( " MPU found \n" );
+			#endif
+
+			break;
+		}
+		else
+		{
+			#ifdef SERIAL_INFO
+			printf( "ERROR: MPU NOT FOUND \n" );
+			#endif
+		}
 	}
 	
 	adc_init();
@@ -225,7 +229,9 @@ if ( liberror )
 	  #ifdef SERIAL_INFO	
 		printf( "ERROR: I2C \n" );	
 		#endif
-		failloop(7);
+
+		liberror = 0;
+		goto start;
 }
 
 
